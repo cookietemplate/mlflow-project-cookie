@@ -1,0 +1,20 @@
+name: {{cookiecutter.project_slug}}
+
+{%- if cookiecutter.projext_environment == "virtualenv" %}
+python_env: python_env.yaml
+{%- elif cookiecutter.projext_environment == "docker" %}
+docker_env: 
+  image: pytorch/pytorch:latest
+{%- elif cookiecutter.projext_environment == "conda" %}
+conda_env: conda_env.yaml
+{%- endif %}
+
+entry_points:
+  main:
+    parameters:
+      name: {
+        description: "Name of the experiment",
+        type: STRING,
+        default: "experiment"
+      }
+    command: "python main.py --name {name}"

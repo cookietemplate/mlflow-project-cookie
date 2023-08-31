@@ -1,2 +1,2 @@
-# cookiecutter-template
-A git template for cookiecutter
+# MLFlow project template
+A git template for MLFlow project
