@@ -10,6 +10,7 @@ dependencies:
   # dependencies
   - python=3.10
   - numpy>=1.25.2
+  - matplotlib>=3.7.2
   # dev dependencies
   - ruff
   - pre-commit

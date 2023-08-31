@@ -1,13 +1,13 @@
 import nox
 
-DEFAULT_DIRS = ["src", "tests"]
+DEFAULT_DIRS = ["."]
 COVERAGE_THRESHOLD = None
 
 
 @nox.session(reuse_venv=True, tags=["typing"])
 def typing(session):
     """Run the type checker."""
-    files = session.posargs or ["src"]
+    files = session.posargs or ["."]
     session.install("mypy")
     session.run("mypy", "--install-types", "--non-interactive", *files)
 
