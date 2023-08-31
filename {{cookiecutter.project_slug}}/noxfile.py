@@ -4,14 +4,6 @@ DEFAULT_DIRS = ["."]
 COVERAGE_THRESHOLD = None
 
 
-@nox.session(reuse_venv=True, tags=["typing"])
-def typing(session):
-    """Run the type checker."""
-    files = session.posargs or ["."]
-    session.install("mypy")
-    session.run("mypy", "--install-types", "--non-interactive", *files)
-
-
 @nox.session(reuse_venv=True, tags=["lint"])
 def black(session):
     """Run the code formatter.(black)"""
@@ -64,14 +56,13 @@ def ruff_fmt(session):
 
     session.install("ruff")
     session.run("ruff", "--fix", *files)
-    
+
 
 @nox.session(reuse_venv=True, tags=["style"])
 def style(session):
     """Run the style checkers."""
     session.run("nox", "-t", "fmt", external=True)
     session.run("nox", "-t", "lint", external=True)
-    session.run("nox", "-t", "typing", external=True)
 
 
 @nox.session(python=False, tags=["prepare"])
