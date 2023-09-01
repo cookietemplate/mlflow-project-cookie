@@ -7,9 +7,9 @@
     "version": "0.1.0",
     "project_short_description": "",
     "projext_environment": [
+        "conda",
         "virtualenv",
         "docker",
-        "conda",
         "system"
     ],
     "open_source_license": [
