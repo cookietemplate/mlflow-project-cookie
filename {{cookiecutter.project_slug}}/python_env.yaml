@@ -11,22 +11,8 @@ dependencies:
   - typer[all]>=0.9.0
   - numpy>=1.25.2
   - matplotlib>=3.7.2
-
-  # dev dependencies
-  # ## ci
-  - nox
-  - pre-commit
-  - pdoc
-  # ## linting
-  - ruff
-  - black
-  - mypy
-  - isort
   # ## notebook
   - notebook>=7.0.3
   - voila>=0.5.1
   - ipywidgets>=8.1.0
-  # ## pytest
-  - pytest>=7.4.0
-  - pytest-cov>=4.1.0
-  - pytest-mock>=3.11.1
+
