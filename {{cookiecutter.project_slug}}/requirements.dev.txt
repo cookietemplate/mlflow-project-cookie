@@ -1,0 +1,14 @@
+# dev dependencies
+# ci
+pdoc
+nox
+pre-commit
+# linting
+ruff
+black
+mypy
+isort
+# pytest
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
